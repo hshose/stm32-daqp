@@ -1,0 +1,9 @@
+src/daqp/
+src/modm/
+
+build/
+
+__pycache__
+
+.sconsign.dblite
+*.xml.log

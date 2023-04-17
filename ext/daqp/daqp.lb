@@ -1,0 +1,27 @@
+def init(module):
+    module.name = "daqp"
+
+def prepare(module, options):
+    return True
+
+def build(env):
+    env.outbasepath = "daqp/src/daqp"
+    env.copy("daqp/include/api.h",          "api.h")
+    env.copy("daqp/include/auxiliary.h",    "auxiliary.h")
+    env.copy("daqp/include/bnb.h",          "bnb.h")
+    env.copy("daqp/include/constants.h",    "constants.h")
+    env.copy("daqp/include/daqp_prox.h",    "daqp_prox.h")
+    env.copy("daqp/include/daqp.h",         "daqp.h")
+    env.copy("daqp/include/factorization.h","factorization.h")
+    env.copy("daqp/include/types.h",        "types.h")
+    env.copy("daqp/include/utils.h",        "utils.h")
+
+    env.copy("daqp/src/api.c",            "api.c")
+    env.copy("daqp/src/auxiliary.c",      "auxiliary.c")
+    env.copy("daqp/src/bnb.c",            "bnb.c")
+    env.copy("daqp/src/daqp_prox.c",      "daqp_prox.c")
+    env.copy("daqp/src/daqp.c",           "daqp.c")
+    env.copy("daqp/src/factorization.c",  "factorization.c")
+    env.copy("daqp/src/utils.c",          "utils.c")
+
+    env.collect(":build:cppdefines", "timegm=mktime")

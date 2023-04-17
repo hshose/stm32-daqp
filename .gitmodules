@@ -1,0 +1,9 @@
+[submodule "src/daqp/daqp"]
+	path = src/daqp/daqp
+	url = https://github.com/darnstrom/daqp
+[submodule "ext/daqp"]
+	path = ext/daqp
+	url = https://github.com/darnstrom/daqp
+[submodule "ext/daqp/daqp"]
+	path = ext/daqp/daqp
+	url = https://github.com/darnstrom/daqp

@@ -1,0 +1,23 @@
+<library>
+    <repositories>
+    <!-- path to modm repository -->
+    <repository>
+        <path>../../modm/repo.lb</path>
+    </repository>
+    
+    <repository>
+        <path>../ext/daqp/repo.lb</path>
+    </repository>
+
+    </repositories>
+  <extends>modm:nucleo-g474re</extends>
+  <options>
+    <option name="modm:build:build.path">../build</option>
+    <option name="modm:build:scons:include_sconstruct">False</option>
+  </options>
+  <modules>
+    <module>modm:build:scons</module>
+    <module>modm:platform:heap</module>
+    <module>daqp:daqp</module>
+  </modules>
+</library>
