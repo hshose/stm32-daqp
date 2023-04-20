@@ -10,7 +10,7 @@
     </repository>
 
     </repositories>
-  <extends>modm:nucleo-g474re</extends>
+  <extends>modm:nucleo-h723zg</extends>
   <options>
     <option name="modm:build:build.path">../build</option>
     <option name="modm:build:scons:include_sconstruct">False</option>
@@ -18,6 +18,7 @@
   <modules>
     <module>modm:build:scons</module>
     <module>modm:platform:heap</module>
+    <module>modm:math:matrix</module>
     <module>daqp:daqp</module>
   </modules>
 </library>

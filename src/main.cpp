@@ -1,4 +1,5 @@
 #include <modm/board.hpp>
+#include <modm/math/matrix.hpp>>
 
 extern "C" {
 #include <daqp/src/daqp/api.h>
@@ -20,6 +21,16 @@ main()
 	MODM_LOG_ERROR   << "error"   << modm::endl;
 
 	uint32_t counter(0);
+
+    const float m[9] = {
+    1, 2, 3,
+    3, 4, 3,
+    5, 6, 3,
+    };
+    const modm::Matrix<float, 3, 3> A(m);
+    const modm::Matrix<float, 3, 3> B(m);
+
+    const auto prod = A*B;
 
 	while (true)
 	{
@@ -52,6 +63,7 @@ main()
         MODM_LOG_INFO << "\tsetup_time = " << result.setup_time << modm::endl;
         MODM_LOG_INFO << "\tsolve_time = " << result.solve_time << modm::endl;
         MODM_LOG_INFO << "\titer = " << result.iter << modm::endl;
+        MODM_LOG_INFO << "\tA = " << A[0] << modm::endl;
 	}
 
 	return 0;
